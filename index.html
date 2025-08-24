@@ -233,7 +233,261 @@
             box-shadow: 0 15px 35px rgba(250, 204, 21, 0.3); 
             cursor: pointer; 
         }
-        /* Product Filters */
+
+
+        /* === تحسينات المودال للهاتف === */
+@media (max-width: 768px) {
+    .product-modal {
+        padding: var(--sp-2);
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .modal-content {
+        max-height: 95vh;
+        width: 100%;
+        margin: 0;
+        border-radius: var(--radius-lg);
+    }
+    
+    .modal-header {
+        padding: var(--sp-4);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    
+    .modal-title {
+        font-size: var(--fs-lg);
+        line-height: 1.3;
+    }
+    
+    .modal-body {
+        padding: var(--sp-4);
+        padding-top: var(--sp-2);
+    }
+    
+    .modal-product-image {
+        max-height: 200px;
+        margin-bottom: var(--sp-4);
+        border-radius: var(--radius-sm);
+    }
+    
+    /* === تحسين اختيار المدة للهاتف === */
+    .duration-selection h4 {
+        font-size: var(--fs-lg);
+        text-align: center;
+        margin-bottom: var(--sp-3);
+    }
+    
+    .duration-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--sp-3) !important;
+    }
+    
+
+
+
+    .duration-btn.popular {
+    border-color: var(--color-secondary) !important;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2) !important;
+}
+
+.duration-btn.popular::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-secondary);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+
+
+    .duration-btn {
+        width: 100% !important;
+        padding: var(--sp-4) !important;
+        border-radius: var(--radius-lg) !important;
+        text-align: center !important;
+        font-size: var(--fs-md) !important;
+        min-height: 80px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: var(--sp-2) !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    }
+    
+    .duration-btn.active {
+        transform: scale(1.02) !important;
+        box-shadow: 0 8px 25px rgba(250, 204, 21, 0.3) !important;
+    }
+    
+    .duration-btn > div:first-child {
+        font-size: var(--fs-lg) !important;
+        font-weight: var(--fw-bold) !important;
+        margin-bottom: var(--sp-1) !important;
+    }
+    
+    .duration-btn > div:nth-child(2) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: var(--sp-1) !important;
+        width: 100% !important;
+    }
+    
+    .duration-btn > div:nth-child(2) > span:first-child {
+        font-size: var(--fs-xl) !important;
+        font-weight: var(--fw-black) !important;
+    }
+    
+    .duration-btn > div:nth-child(2) > span:last-child {
+        font-size: var(--fs-sm) !important;
+    }
+    
+    .duration-btn > div:last-child {
+        font-size: var(--fs-xs) !important;
+        margin-top: var(--sp-1) !important;
+    }
+    
+    /* === تحسين قائمة المميزات === */
+    .modal-features {
+        margin-bottom: var(--sp-4);
+    }
+    
+    .modal-features li {
+        padding: var(--sp-3);
+        margin-bottom: var(--sp-2);
+        font-size: var(--fs-sm);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: flex-start;
+        gap: var(--sp-2);
+    }
+    
+    /* === تحسين قسم التقييمات === */
+    .modal-reviews-container h4 {
+        font-size: var(--fs-lg);
+        margin-bottom: var(--sp-3);
+    }
+    
+    .review-item {
+        padding: var(--sp-3);
+        margin-bottom: var(--sp-3);
+        border-radius: var(--radius-sm);
+    }
+    
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-2);
+        margin-bottom: var(--sp-2);
+    }
+    
+    .review-author {
+        font-size: var(--fs-sm);
+    }
+    
+    .review-stars svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .review-comment {
+        font-size: var(--fs-sm);
+        line-height: 1.5;
+    }
+    
+    /* === تحسين أزرار الأكشن === */
+    .modal-actions {
+        position: sticky;
+        bottom: 0;
+        background: var(--color-dark-secondary);
+        padding: var(--sp-4);
+        margin: 0 calc(var(--sp-4) * -1);
+        margin-top: var(--sp-6);
+        border-top: 2px solid var(--color-dark-border);
+        gap: var(--sp-3) !important;
+    }
+    
+    .modal-actions button {
+        padding: var(--sp-4) var(--sp-3) !important;
+        font-size: var(--fs-md) !important;
+        font-weight: var(--fw-bold) !important;
+        border-radius: var(--radius-lg) !important;
+        min-height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: var(--sp-2) !important;
+    }
+    
+    /* === تحسين العناوين === */
+    .modal-body h4 {
+        font-size: var(--fs-lg) !important;
+        margin-bottom: var(--sp-3) !important;
+        text-align: center;
+        padding: var(--sp-2);
+        background: rgba(250, 204, 21, 0.1);
+        border-radius: var(--radius-sm);
+        border-left: 4px solid var(--color-primary);
+    }
+    
+    /* === تحسين وصف المنتج === */
+    .modal-body > p:first-of-type {
+        font-size: var(--fs-md) !important;
+        line-height: 1.6 !important;
+        text-align: center;
+        padding: var(--sp-3);
+        background: var(--color-dark-surface);
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--sp-4) !important;
+    }
+}
+
+/* === تحسينات إضافية للشاشات الصغيرة جداً === */
+@media (max-width: 480px) {
+    .modal-content {
+        max-height: 98vh;
+        border-radius: var(--radius-md);
+    }
+    
+    .modal-header {
+        padding: var(--sp-3);
+    }
+    
+    .modal-body {
+        padding: var(--sp-3);
+    }
+    
+    .modal-title {
+        font-size: var(--fs-md);
+    }
+    
+    .duration-btn {
+        min-height: 70px !important;
+        padding: var(--sp-3) !important;
+    }
+    
+    .modal-actions {
+        padding: var(--sp-3);
+    }
+    
+    .modal-actions button {
+        min-height: 45px !important;
+        font-size: var(--fs-sm) !important;
+    }
+}
+
+        /* === NEW: Product Filters with Subcategories === */
         .product-filters {
             display: flex; justify-content: center; flex-wrap: wrap;
             gap: var(--sp-3); margin-bottom: var(--sp-12);
@@ -252,6 +506,46 @@
             box-shadow: 0 8px 20px rgba(250, 204, 21, 0.25);
             transform: scale(1.1);
         }
+
+        /* === NEW: Subcategory Filters === */
+        .subcategory-filters {
+            display: none; /* مخفي بشكل افتراضي */
+            justify-content: center; flex-wrap: wrap;
+            gap: var(--sp-2); margin-bottom: var(--sp-8);
+            padding: var(--sp-4);
+            background: rgba(55, 65, 81, 0.3);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-dark-border);
+        }
+        .subcategory-filters.active {
+            display: flex; /* يظهر عندما يكون نشط */
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .subcategory-btn {
+            background: var(--color-dark-secondary); color: var(--color-text-secondary);
+            border: 1px solid var(--color-dark-border);
+            padding: var(--sp-2) var(--sp-4); border-radius: var(--radius-full);
+            font-family: inherit; font-size: var(--fs-sm);
+            font-weight: var(--fw-medium); cursor: pointer;
+            transition: all var(--duration-fast) ease;
+            display: flex; align-items: center; gap: var(--sp-2);
+        }
+        .subcategory-btn:hover {
+            background: var(--color-dark-surface);
+            color: var(--color-text-primary);
+            border-color: var(--color-primary);
+        }
+        .subcategory-btn.active {
+            background: var(--gradient-secondary); 
+            color: var(--color-text-inverted);
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+
         /* Products Grid */
         .products-grid { 
             display: grid; 
@@ -620,6 +914,10 @@
             
             .product-filters { gap: var(--sp-2); }
             .filter-btn { padding: var(--sp-2) var(--sp-4); }
+            
+            .subcategory-filters { gap: var(--sp-1); padding: var(--sp-3); }
+            .subcategory-btn { padding: var(--sp-1) var(--sp-3); font-size: var(--fs-xs); }
+            
             /* NEW: Move floating buttons to the right and resize for mobile */
             .whatsapp-float {
                 left: auto; right: 20px; bottom: 20px;
@@ -803,12 +1101,19 @@
                     <h2>باقة مختارة من أجلك</h2>
                     <p>كل ما تحتاجه من أدوات إبداعية وترفيهية في مكان واحد، بضمان وجودة لا تضاهى.</p>
                 </div>
+                
+                <!-- الفلاتر الرئيسية -->
                 <div class="product-filters fade-in-up">
                     <button class="filter-btn active" data-filter="all">الكل</button>
                     <button class="filter-btn" data-filter="entertainment">🎬 ترفيه</button>
                     <button class="filter-btn" data-filter="productivity">💼 إنتاجية</button>
                     <button class="filter-btn" data-filter="ai">🤖 ذكاء اصطناعي</button>
                     <button class="filter-btn" data-filter="gaming">🎮 ألعاب</button>
+                </div>
+
+                <!-- الفلاتر الفرعية (مخفية بشكل افتراضي) -->
+                <div class="subcategory-filters" id="subcategory-filters">
+                    <!-- سيتم ملؤها ديناميكياً بواسطة JavaScript -->
                 </div>
                 
                 <div class="products-grid" id="products-grid">
@@ -856,7 +1161,7 @@
     <script src="./products.js"></script>
     
     <script>
-    // Shopping Cart System
+    // Shopping Cart System with Duration Support
     class ShoppingCart {
         constructor() { 
             this.items = []; 
@@ -873,35 +1178,32 @@
             document.getElementById('cart-btn').addEventListener('click', () => this.toggleCart());
             document.getElementById('cart-close').addEventListener('click', () => this.closeCart());
             document.getElementById('checkout-btn').addEventListener('click', () => this.checkout());
-            
-            document.addEventListener('click', (e) => {
-                if (e.target.classList.contains('add-to-cart-btn')) {
-                    const productCard = e.target.closest('.product-card') || e.target.closest('.modal-content');
-                    if(productCard) {
-                        const productDataAttr = productCard.closest('[data-product]') ? productCard.closest('[data-product]').getAttribute('data-product') : null;
-                        if (productDataAttr) {
-                            const productData = JSON.parse(productDataAttr);
-                            this.addItem(productData);
-                        }
-                    }
-                }
-            });
         }
         
-        addItem(product) {
-            const existingItem = this.items.find(item => item.title === product.title);
+        addItem(product, duration, pricing) {
+            const itemKey = `${product.title}-${duration}`;
+            const existingItem = this.items.find(item => item.key === itemKey);
+            
             if (existingItem) { 
                 existingItem.quantity += 1; 
             } else { 
-                this.items.push({ ...product, quantity: 1 }); 
+                this.items.push({ 
+                    key: itemKey,
+                    title: product.title,
+                    duration: pricing.duration,
+                    price: pricing.price,
+                    originalPrice: pricing.originalPrice,
+                    image: product.image,
+                    quantity: 1 
+                }); 
             }
             this.saveToStorage(); 
             this.updateUI(); 
             this.showAddedToCartAnimation();
         }
         
-        removeItem(title) {
-            this.items = this.items.filter(item => item.title !== title);
+        removeItem(key) {
+            this.items = this.items.filter(item => item.key !== key);
             this.saveToStorage(); 
             this.updateUI();
         }
@@ -921,7 +1223,7 @@
             cartItemsContainer.innerHTML = '';
             if (this.items.length === 0) {
                 cartItemsContainer.innerHTML = `
-                    <div class="empty-cart" id="empty-cart">
+                    <div class="empty-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c.51 0 .962-.328 1.093-.828l2.857-9.471H4.897M7.5 14.25h5.625M17.25 14.25h-2.625m0 0l-1.25-1.25m-1.25 1.25l-1.25-1.25m-1.25 1.25L11 11.25m5.625 3l-1.25-1.25" />
                         </svg>
@@ -936,9 +1238,10 @@
                         <img src="${item.image}" alt="${item.title}" class="cart-item-image">
                         <div class="cart-item-details">
                             <div class="cart-item-title">${item.title}</div>
+                            <div class="cart-item-duration" style="color: var(--color-secondary); font-size: 0.85rem; margin: 2px 0;">${item.duration}</div>
                             <div class="cart-item-price">${item.price} د.أ × ${item.quantity}</div>
                         </div>
-                        <button class="cart-item-remove" onclick="cart.removeItem('${item.title.replace(/'/g, "\\'")}')">
+                        <button class="cart-item-remove" onclick="cart.removeItem('${item.key}')">
                             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>
                         </button>
                     </div>`).join('');
@@ -957,13 +1260,12 @@
         checkout() {
             if (this.items.length === 0) return;
             const totalPrice = this.items.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0);
-            const itemsList = this.items.map(item => `• ${item.title} - ${item.price} د.أ × ${item.quantity} = ${(parseFloat(item.price) * item.quantity).toFixed(0)} د.أ`).join('\n');
+            const itemsList = this.items.map(item => `• ${item.title} (${item.duration}) - ${item.price} د.أ × ${item.quantity} = ${(parseFloat(item.price) * item.quantity).toFixed(0)} د.أ`).join('\n');
             const message = `مرحباً 👋\n\nأريد طلب هذه المنتجات من هامش:\n\n${itemsList}\n\n💰 المجموع الإجمالي: ${totalPrice.toFixed(0)} د.أ\n\nأرجو التواصل معي لإتمام الطلب.\n\nشكراً لكم 🌟`;
             this.sendWhatsAppMessage(message);
         }
         
         sendWhatsAppMessage(message) {
-            // !!! هام: استبدل الرقم التالي برقم الواتساب الخاص بك !!!
             const whatsappNumber = "966XXXXXXXXX"; 
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
@@ -993,13 +1295,15 @@
         }
     }
 
-    // Product Modal System
+    // Product Modal System with Duration Selection
     class ProductModal {
         constructor() {
             this.modal = document.getElementById('product-modal'); 
             this.modalTitle = document.getElementById('modal-title');
             this.modalBody = document.getElementById('modal-body'); 
             this.modalClose = document.getElementById('modal-close');
+            this.selectedDuration = '1month';
+            this.currentProduct = null;
             this.init();
         }
         
@@ -1019,7 +1323,6 @@
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape') this.close(); });
         }
         
-        // === NEW HELPER: Function to generate star ratings ===
         generateStars(rating) {
             let starsHTML = '';
             const starSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>`;
@@ -1031,65 +1334,110 @@
             return `<div class="review-stars">${starsHTML}</div>`;
         }
         
-        // === MODIFIED: showProduct to include reviews ===
         showProduct(product) {
-            this.modalTitle.textContent = product.title;
-            const featuresHTML = product.features.map(f => `<li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>${f}</li>`).join('');
+    this.currentProduct = product;
+    this.selectedDuration = '1month';
+    this.modalTitle.textContent = product.title;
+    
+    const featuresHTML = product.features.map(f => `<li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>${f}</li>`).join('');
 
-            // === NEW: Generate Reviews HTML ===
-            let reviewsHTML = '';
-            if (product.reviews && product.reviews.length > 0) {
-                reviewsHTML = `
-                    <div class="modal-reviews-container">
-                        <h4 style="color: var(--color-text-primary); margin-bottom: var(--sp-4); font-size: var(--fs-xl);">⭐ التقييمات</h4>
-                        ${product.reviews.map(review => `
-                            <div class="review-item">
-                                <div class="review-header">
-                                    <span class="review-author">${review.author}</span>
-                                    ${this.generateStars(review.rating)}
-                                </div>
-                                <p class="review-comment">${review.comment}</p>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            } else {
-                 reviewsHTML = `
-                    <div class="modal-reviews-container">
-                        <h4 style="color: var(--color-text-primary); margin-bottom: var(--sp-4); font-size: var(--fs-xl);">⭐ التقييمات</h4>
-                        <div class="no-reviews">لا توجد تقييمات لهذا المنتج بعد.</div>
-                    </div>
-                `;
-            }
-            
-            const productDataString = JSON.stringify(product).replace(/"/g, '&quot;');
-            this.modalBody.innerHTML = `
-                <div data-product='${productDataString}'>
-                    <img src="${product.image}" alt="${product.title}" class="modal-product-image">
-                    <p style="color: var(--color-text-secondary); margin-bottom: var(--sp-6); font-size: var(--fs-lg);">${product.description}</p>
-                    <h4 style="color: var(--color-text-primary); margin-bottom: var(--sp-4); font-size: var(--fs-xl);">✨ المميزات:</h4>
-                    <ul class="modal-features">${featuresHTML}</ul>
-                    
-                    ${reviewsHTML} 
-
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--sp-8); margin-bottom: var(--sp-6); flex-wrap: wrap; gap: var(--sp-2);">
-                        <div>
-                            ${product.originalPrice ? `<div style="font-size: var(--fs-sm); color: var(--color-text-muted); text-decoration: line-through;">${product.originalPrice} د.أ</div>` : ''}
-                            <div style="font-size: var(--fs-2xl); font-weight: var(--fw-black); background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${product.price} د.أ</div>
+    // Generate Reviews HTML
+    let reviewsHTML = '';
+    if (product.reviews && product.reviews.length > 0) {
+        reviewsHTML = `
+            <div class="modal-reviews-container">
+                <h4>⭐ آراء العملاء</h4>
+                ${product.reviews.map(review => `
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="review-author">${review.author}</span>
+                            ${this.generateStars(review.rating)}
                         </div>
-                        ${product.originalPrice ? `<div style="background: linear-gradient(135deg, #DC2626, #EF4444); color: white; padding: var(--sp-2) var(--sp-4); border-radius: var(--radius-full); font-weight: bold;">🔥 خصم ${Math.round(((parseFloat(product.originalPrice) - parseFloat(product.price)) / parseFloat(product.originalPrice)) * 100)}%</div>` : ''}
+                        <p class="review-comment">${review.comment}</p>
                     </div>
-                    <div class="modal-actions">
-                        <button class="add-to-cart-btn" onclick='cart.addItem(JSON.parse(this.closest("[data-product]").dataset.product)); productModal.close();'>أضف للسلة 🛒</button>
-                        <button class="view-details-btn" style="background-color: var(--color-dark-border)" onclick='productModal.orderDirectly(JSON.parse(this.closest("[data-product]").dataset.product))'>اطلب مباشرة 🚀</button>
-                    </div>
-                </div>`;
-            this.modal.classList.add('active'); 
-            document.body.style.overflow = 'hidden';
+                `).join('')}
+            </div>
+        `;
+    }
+
+    // تحسين Duration Selection HTML للهاتف
+    const durationSelectionHTML = `
+        <div class="duration-selection">
+            <h4>⏰ اختر المدة المناسبة</h4>
+            <div class="duration-buttons">
+                ${Object.entries(product.pricing).map(([key, pricing]) => {
+                    const savings = pricing.originalPrice ? Math.round(((parseFloat(pricing.originalPrice) - parseFloat(pricing.price)) / parseFloat(pricing.originalPrice)) * 100) : 0;
+                    const isPopular = key === '3months'; // جعل 3 أشهر الأكثر شعبية
+                    
+                    return `
+                        <button class="duration-btn ${key === this.selectedDuration ? 'active' : ''} ${isPopular ? 'popular' : ''}" 
+                                data-duration="${key}"
+                                style="background: ${key === this.selectedDuration ? 'var(--gradient-primary)' : 'var(--color-dark-surface)'}; 
+                                       color: ${key === this.selectedDuration ? 'var(--color-text-inverted)' : 'var(--color-text-primary)'}; 
+                                       border: 2px solid ${key === this.selectedDuration ? 'transparent' : (isPopular ? 'var(--color-secondary)' : 'var(--color-dark-border)')}; 
+                                       position: relative;">
+                            ${isPopular ? '<div style="position: absolute; top: -8px; right: 8px; background: var(--color-secondary); color: white; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: bold;">الأكثر شعبية</div>' : ''}
+                            <div>${pricing.duration}</div>
+                            <div>
+                                <span>${pricing.price} د.أ</span>
+                                ${pricing.originalPrice ? `<span>${pricing.originalPrice} د.أ</span>` : ''}
+                            </div>
+                            ${savings > 0 ? `<div>وفر ${savings}% 🎉</div>` : ''}
+                        </button>
+                    `;
+                }).join('')}
+            </div>
+        </div>
+    `;
+    
+    this.modalBody.innerHTML = `
+        <img src="${product.image}" alt="${product.title}" class="modal-product-image">
+        <p>${product.description}</p>
+        
+        ${durationSelectionHTML}
+        
+        <h4>✨ مميزات الخدمة</h4>
+        <ul class="modal-features">${featuresHTML}</ul>
+        
+        ${reviewsHTML}
+
+        <div class="modal-actions">
+            <button class="add-to-cart-btn" onclick="productModal.addToCart()">🛒 أضف للسلة</button>
+            <button class="view-details-btn" style="background: var(--color-secondary);" onclick="productModal.orderDirectly()">🚀 اطلب الآن</button>
+        </div>
+    `;
+    
+    // Add event listeners for duration buttons
+    this.modalBody.querySelectorAll('.duration-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            this.selectedDuration = btn.dataset.duration;
+            this.updateDurationSelection();
+        });
+    });
+    
+    this.modal.classList.add('active'); 
+    document.body.style.overflow = 'hidden';
+}
+        
+        updateDurationSelection() {
+            this.modalBody.querySelectorAll('.duration-btn').forEach(btn => {
+                const isSelected = btn.dataset.duration === this.selectedDuration;
+                btn.classList.toggle('active', isSelected);
+                btn.style.background = isSelected ? 'var(--gradient-primary)' : 'var(--color-dark-surface)';
+                btn.style.color = isSelected ? 'var(--color-text-inverted)' : 'var(--color-text-primary)';
+                btn.style.borderColor = isSelected ? 'transparent' : 'var(--color-dark-border)';
+            });
         }
         
-        orderDirectly(product) {
-            const message = `مرحباً 👋\n\nأريد طلب هذا المنتج من هامش:\n\n📦 المنتج: ${product.title}\n💰 السعر: ${product.price} د.أ\n\nأرجو التواصل معي لإتمام الطلب.\n\nشكراً لكم 🌟`;
+        addToCart() {
+            const pricing = this.currentProduct.pricing[this.selectedDuration];
+            cart.addItem(this.currentProduct, this.selectedDuration, pricing);
+            this.close();
+        }
+        
+        orderDirectly() {
+            const pricing = this.currentProduct.pricing[this.selectedDuration];
+            const message = `مرحباً 👋\n\nأريد طلب هذا المنتج من هامش:\n\n📦 المنتج: ${this.currentProduct.title}\n⏰ المدة: ${pricing.duration}\n💰 السعر: ${pricing.price} د.أ\n\nأرجو التواصل معي لإتمام الطلب.\n\nشكراً لكم 🌟`;
             const whatsappNumber = "966XXXXXXXXX";
             window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
             this.close();
@@ -1106,6 +1454,7 @@
         constructor() {
             this.products = [];
             this.currentFilter = 'all';
+            this.currentSubcategory = 'all';
             this.isLoading = false;
         }
         
@@ -1116,10 +1465,7 @@
             this.showLoadingState();
             
             try {
-                // استخدام البيانات المضمنة من products.js
                 this.products = productsData.products || [];
-                // تحويل الأسعار من الريال السعودي إلى الدينار الأردني
-                this.convertPricesToJOD();
                 this.displayProducts();
                 
             } catch (error) {
@@ -1128,17 +1474,6 @@
             } finally {
                 this.isLoading = false;
             }
-        }
-
-        // تحويل الأسعار من الريال السعودي إلى الدينار الأردني
-        convertPricesToJOD() {
-            const conversionRate = 0.19; // 1 ريال سعودي = 0.19 دينار أردني تقريباً
-            
-            this.products = this.products.map(product => ({
-                ...product,
-                price: (parseFloat(product.price) * conversionRate).toFixed(1),
-                originalPrice: product.originalPrice ? (parseFloat(product.originalPrice) * conversionRate).toFixed(1) : null
-            }));
         }
 
         showLoadingState() {
@@ -1151,6 +1486,9 @@
             `;
         }
 
+
+        
+
         showErrorState(errorMessage) {
             const grid = document.getElementById('products-grid');
             grid.innerHTML = `
@@ -1158,12 +1496,82 @@
                     <h3>⚠️ خطأ في تحميل المنتجات</h3>
                     <p>عذراً، حدث خطأ أثناء تحميل المنتجات. يرجى المحاولة مرة أخرى.</p>
                     <button onclick="productsManager.loadProducts()" style="background: var(--gradient-primary); color: var(--color-text-inverted); border: none; padding: var(--sp-3) var(--sp-6); border-radius: var(--radius-full); font-weight: bold; cursor: pointer; margin-top: var(--sp-4);">إعادة المحاولة</button>
-                    <details style="margin-top: var(--sp-4); font-size: var(--fs-sm); opacity: 0.7;">
-                        <summary>تفاصيل الخطأ</summary>
-                        <p>${errorMessage}</p>
-                    </details>
                 </div>
             `;
+        }
+
+        showSubcategories(category) {
+            const subcategoryContainer = document.getElementById('subcategory-filters');
+            
+            if (category === 'all') {
+                subcategoryContainer.classList.remove('active');
+                this.currentSubcategory = 'all';
+                return;
+            }
+
+            const subcategories = this.getSubcategoriesForCategory(category);
+            
+            if (subcategories.length > 0) {
+                const subcategoryButtons = subcategories.map(subcat => {
+                    const icon = this.getSubcategoryIcon(subcat.key);
+                    return `<button class="subcategory-btn ${subcat.key === 'all' ? 'active' : ''}" data-subcategory="${subcat.key}">
+                        ${icon} ${subcat.name}
+                    </button>`;
+                }).join('');
+
+                subcategoryContainer.innerHTML = `
+                    <button class="subcategory-btn active" data-subcategory="all">الكل</button>
+                    ${subcategoryButtons}
+                `;
+                subcategoryContainer.classList.add('active');
+                this.currentSubcategory = 'all';
+            } else {
+                subcategoryContainer.classList.remove('active');
+                this.currentSubcategory = 'all';
+            }
+        }
+
+        getSubcategoriesForCategory(category) {
+            const categorySubcategories = {
+                entertainment: [
+                    { key: 'netflix', name: 'نتفليكس' },
+                    { key: 'spotify', name: 'سبوتيفاي' },
+                    { key: 'shahid', name: 'شاهد' },
+                    { key: 'amazon', name: 'أمازون برايم' },
+                    { key: 'appletv', name: 'آبل تي في' },
+                    { key: 'disney', name: 'ديزني بلس' },
+                    { key: 'youtube', name: 'يوتيوب بريميوم' }
+                ],
+                gaming: [
+                    { key: 'playstation', name: 'بلايستيشن' },
+                    { key: 'xbox', name: 'إكس بوكس' },
+                    { key: 'steam', name: 'ستيم' }
+                ],
+                ai: [
+                    { key: 'chatgpt', name: 'ChatGPT' },
+                    { key: 'claude', name: 'Claude' },
+                    { key: 'midjourney', name: 'Midjourney' }
+                ],
+                productivity: [
+                    { key: 'canva', name: 'كانفا' },
+                    { key: 'adobe', name: 'أدوبي' },
+                    { key: 'microsoft', name: 'مايكروسوفت' },
+                    { key: 'notion', name: 'نوشن' }
+                ]
+            };
+
+            return categorySubcategories[category] || [];
+        }
+
+        getSubcategoryIcon(subcategory) {
+            const icons = {
+                netflix: '🎬', spotify: '🎵', shahid: '📺', amazon: '📦', 
+                appletv: '🍎', disney: '🏰', youtube: '📹',
+                playstation: '🎮', xbox: '🎯', steam: '⚡',
+                chatgpt: '🤖', claude: '🧠', midjourney: '🎨',
+                canva: '🎨', adobe: '🔧', microsoft: '💼', notion: '📝'
+            };
+            return icons[subcategory] || '📱';
         }
 
         displayProducts() {
@@ -1179,9 +1587,15 @@
                 return;
             }
 
-            const filteredProducts = this.currentFilter === 'all' 
-                ? this.products 
-                : this.products.filter(product => product.category === this.currentFilter);
+            let filteredProducts = this.products;
+            
+            if (this.currentFilter !== 'all') {
+                filteredProducts = filteredProducts.filter(product => product.category === this.currentFilter);
+            }
+            
+            if (this.currentSubcategory !== 'all') {
+                filteredProducts = filteredProducts.filter(product => product.subcategory === this.currentSubcategory);
+            }
 
             if (filteredProducts.length === 0) {
                 grid.innerHTML = `
@@ -1195,7 +1609,6 @@
 
             grid.innerHTML = filteredProducts.map(product => this.createProductCard(product)).join('');
             
-            // إعادة تفعيل الأنيميشن للعناصر الجديدة
             setTimeout(() => {
                 document.querySelectorAll('.product-card').forEach(card => {
                     card.classList.add('is-visible');
@@ -1203,7 +1616,6 @@
             }, 100);
         }
 
-        // Helper function to generate stars
         generateStars(rating) {
             let starsHTML = '';
             const starSVG = `<svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`;
@@ -1222,7 +1634,6 @@
                 `<li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>${feature}</li>`
             ).join('');
 
-            // Generate reviews display
             let reviewsHTML = '';
             if (product.reviews && product.reviews.length > 0) {
                 const averageRating = product.reviews.reduce((sum, review) => sum + review.rating, 0) / product.reviews.length;
@@ -1234,16 +1645,17 @@
                 `;
             }
 
-            // Add discount badge if there's an original price
-            const discountBadge = product.originalPrice ? 
-                `<div class="product-badge">خصم ${Math.round(((parseFloat(product.originalPrice) - parseFloat(product.price)) / parseFloat(product.originalPrice)) * 100)}%</div>` : '';
+            // Get starting price (1 month price)
+            const startingPrice = product.pricing['1month'];
+            const discountBadge = startingPrice.originalPrice ? 
+                `<div class="product-badge">خصم ${Math.round(((parseFloat(startingPrice.originalPrice) - parseFloat(startingPrice.price)) / parseFloat(startingPrice.originalPrice)) * 100)}%</div>` : '';
 
             return `
                 <div class="product-card fade-in-up" data-category="${product.category}" data-product='${productDataString}'>
                     ${discountBadge}
                     <div class="product-image-container">
                         <img src="${product.image}" alt="${product.title}" class="product-image" 
-                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyMCIgdmlld0JveD0iMCAwIDMyMCAyMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjIwIiBmaWxsPSIjMzc0MTUxIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUNBM0FGIiBmb250LXNpemU9IjE0Ij7YtdmI2LHYqSDZhNmFINiq2KrYrNmE2YQ8L3RleHQ+Cjwvc3ZnPgo='">
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIyMCIgdmlld0JveD0iMCAwIDMyMCAyMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMjIwIiBmaWxsPSIjMzc0MTUxIi8+Cjx0ZXh0IHg9IjE2MCIgeT0iMTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUNBM0FGIiBmb250LXNpemU9IjE0Ij7YtdmI2LHYqSDZhNmFINiq2KrYrNmE2YE8L3RleHQ+Cjwvc3ZnPgo='">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">${product.title}</h3>
@@ -1251,12 +1663,11 @@
                         <ul class="product-features">${featuresHTML}</ul>
                         <div class="product-footer">
                             <div class="product-price">
-                                ${product.originalPrice ? `<span class="price-original">${product.originalPrice} د.أ</span>` : ''}
-                                <span class="price-current">${product.price} د.أ</span>
+                                ${startingPrice.originalPrice ? `<span class="price-original">${startingPrice.originalPrice} د.أ</span>` : ''}
+                                <span class="price-current">من ${startingPrice.price} د.أ</span>
                             </div>
                             <div>
-                                <button class="view-details-btn">التفاصيل</button>
-                                <button class="add-to-cart-btn">أضف للسلة</button>
+                                <button class="view-details-btn">اختر المدة</button>
                             </div>
                         </div>
                     </div>
@@ -1266,13 +1677,18 @@
 
         filterProducts(category) {
             this.currentFilter = category;
+            this.showSubcategories(category);
+            this.displayProducts();
+        }
+
+        filterBySubcategory(subcategory) {
+            this.currentSubcategory = subcategory;
             this.displayProducts();
         }
     }
 
     // Main App Logic
     document.addEventListener('DOMContentLoaded', () => {
-        // تهيئة المكونات الرئيسية
         window.cart = new ShoppingCart();
         window.productModal = new ProductModal();
         window.productsManager = new ProductsManager();
@@ -1285,35 +1701,16 @@
                 this.initMobileMenu(); 
                 this.initFaqAccordion(); 
                 this.initProductFilter();
+                this.initSubcategoryFilter();
                 this.initScrollToTop(); 
                 this.initSmoothScroll();
                 this.initWhatsAppButton();
-                this.initProductCardClicks();
                 
-                // تحميل المنتجات
                 this.loadProducts();
             },
 
             async loadProducts() {
                 await window.productsManager.loadProducts();
-            },
-
-            initProductCardClicks() {
-                // إضافة event listener للكروت للانتقال لصفحة التفاصيل
-                document.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('product-card') || e.target.closest('.product-card')) {
-                        const card = e.target.classList.contains('product-card') ? e.target : e.target.closest('.product-card');
-                        const productData = JSON.parse(card.dataset.product);
-                        // إذا لم يكن الكليك على زر
-                        if (!e.target.classList.contains('add-to-cart-btn') && 
-                            !e.target.classList.contains('view-details-btn') &&
-                            !e.target.closest('.add-to-cart-btn') &&
-                            !e.target.closest('.view-details-btn')) {
-                            // فتح المودال بدلاً من الانتقال لصفحة أخرى
-                            window.productModal.showProduct(productData);
-                        }
-                    }
-                });
             },
 
             initWhatsAppButton() {
@@ -1429,20 +1826,30 @@
                 
                 filterButtons.forEach(button => {
                     button.addEventListener('click', () => {
-                        // تحديث الأزرار
                         filterButtons.forEach(btn => btn.classList.remove('active'));
                         button.classList.add('active');
                         
-                        // تطبيق الفلتر
                         const filter = button.dataset.filter;
                         window.productsManager.filterProducts(filter);
                     });
+                });
+            },
+
+            initSubcategoryFilter() {
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('subcategory-btn')) {
+                        document.querySelectorAll('.subcategory-btn').forEach(btn => btn.classList.remove('active'));
+                        e.target.classList.add('active');
+                        
+                        const subcategory = e.target.dataset.subcategory;
+                        window.productsManager.filterBySubcategory(subcategory);
+                    }
                 });
             }
         };
 
         app.init();
     });
-    </script>
+</script>
 </body>
 </html>
